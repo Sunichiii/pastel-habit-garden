@@ -1,6 +1,4 @@
-// Pastel color palette (Pastel rang haru)
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
   static const pastelPink = Color(0xFFFFD1DC);
@@ -9,10 +7,19 @@ class AppColors {
   static const pastelPeach = Color(0xFFFFDAB9);
   static const pastelBlue = Color(0xFFAEC6CF);
   static const pastelYellow = Color(0xFFFFFAA0);
+  static const pastelGreen = Color(0xFFC1E1C1);
 
-  // Gradient for background (Pitho ko gradient)
-  static get backgroundGradient => LinearGradient(
+  static const primary = pastelMint;
+  static const secondary = pastelLavender;
+
+  static LinearGradient get backgroundGradient => const LinearGradient(
     colors: [pastelMint, pastelLavender],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  static LinearGradient get buttonGradient => const LinearGradient(
+    colors: [pastelBlue, pastelGreen],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
